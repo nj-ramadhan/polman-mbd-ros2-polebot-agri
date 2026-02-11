@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.8" xmlns:xacro="http://ros.org/wiki/xacro">
-  <model name='polebot_land' canonical_link='base_link'>
+  <model name='polebot_agri' canonical_link='base_link'>
 
     <xacro:property name="XACRO_DIR" value="${xacro.abs_filename('')}" />
 
@@ -67,7 +67,7 @@
         <pose relative_to="base_link">0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>file://${XACRO_DIR}/meshes/polebot_land.stl</uri>
+            <uri>file://${XACRO_DIR}/meshes/polebot_agri.stl</uri>
             <scale>1 1 1</scale>
           </mesh>
         </geometry>

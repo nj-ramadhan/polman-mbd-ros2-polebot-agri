@@ -23,7 +23,7 @@ setup(
     zip_safe=True,
     maintainer='NJ-Ramadhan',
     maintainer_email='nj.ramadhan.mechatronics@gmail.com',
-    description='Localization EKF package for POLEBOT_LAND robots by NJ-Ramadhan',
+    description='Localization EKF package for POLEBOT_AGRI robots by NJ-Ramadhan',
     license='Apache-2.0',
     tests_require=['pytest'],
     # Paket ini tidak punya node Python, jadi entry_points kosong
