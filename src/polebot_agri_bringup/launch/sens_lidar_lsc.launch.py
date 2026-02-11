@@ -8,9 +8,9 @@ from ament_index_python.packages import get_package_share_directory
 import xacro
 
 def generate_launch_description():
-    description_pkg_path = FindPackageShare('polebot_amr_description').find('polebot_amr_description')
-    xacro_file = os.path.join(description_pkg_path, 'urdf', 'robot', 'polebot_amr.xacro')
-    rviz_config = os.path.join(description_pkg_path, 'rviz', 'polebot_amr.rviz')
+    description_pkg_path = FindPackageShare('polebot_agri_description').find('polebot_agri_description')
+    xacro_file = os.path.join(description_pkg_path, 'urdf', 'robot', 'polebot_agri.xacro')
+    rviz_config = os.path.join(description_pkg_path, 'rviz', 'polebot_agri.rviz')
 
     robot_description_config = xacro.process_file(
         xacro_file,

@@ -10,10 +10,10 @@ from launch.actions import DeclareLaunchArgument
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
-    joy_params = os.path.join(get_package_share_directory('polebot_amr_bringup'),'params','joystick_params.yaml')
+    joy_params = os.path.join(get_package_share_directory('polebot_agri_bringup'),'params','joystick_params.yaml')
 
     fake_odom_node = Node(
-        package='polebot_amr_bringup',
+        package='polebot_agri_bringup',
         executable='fake_odom_publisher.py',
         name='fake_odom_publisher',
         output='screen'
@@ -45,7 +45,7 @@ def generate_launch_description():
     slam_toolbox_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
-                get_package_share_directory('polebot_amr_slam'),
+                get_package_share_directory('polebot_agri_slam'),
                 'launch',
                 'polebot_slam.launch.py'
             )

@@ -2,15 +2,15 @@ twist_mux:
   ros__parameters:
     topics:
       joystick:
-        topic: /joy/cmd_vel
+        topic: /joy/cmd_vel_unstamped
         timeout: 0.5
         priority: 20
       navigation:
-        topic: /nav/cmd_vel
+        topic: /nav/cmd_vel_unstamped
         timeout: 0.5
         priority: 10
       teleop:
-        topic: /cmd_vel
+        topic: /cmd_vel_unstamped
         timeout: 0.5
         priority: 30
       smc:

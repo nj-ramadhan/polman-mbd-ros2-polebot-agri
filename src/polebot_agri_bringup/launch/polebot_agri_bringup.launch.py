@@ -1,4 +1,4 @@
-# launch/polebot_amr_bringup.launch.py
+# launch/polebot_agri_bringup.launch.py
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, ExecuteProcess
 from launch.launch_description_sources import PythonLaunchDescriptionSource
@@ -9,14 +9,14 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
     # Package directories
-    pkg_polebot_description = get_package_share_directory('polebot_amr_description')
-    pkg_polebot_bringup = get_package_share_directory('polebot_amr_bringup')
+    pkg_polebot_description = get_package_share_directory('polebot_agri_description')
+    pkg_polebot_bringup = get_package_share_directory('polebot_agri_bringup')
     pkg_slam_toolbox = get_package_share_directory('slam_toolbox')
     pkg_nav2_bringup = get_package_share_directory('nav2_bringup')
 
     # Config file path
     nav2_params_file = PathJoinSubstitution([
-        pkg_polebot_description, 'config', 'polebot_amr_nav2_params.yaml'
+        pkg_polebot_description, 'config', 'polebot_agri_nav2_params.yaml'
     ])
 
     joy_params_file = PathJoinSubstitution([
@@ -59,7 +59,7 @@ def generate_launch_description():
         # 1. Robot simulation (Gazebo + RViz)
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
-                PathJoinSubstitution([pkg_polebot_description, 'launch', 'polebot_amr_display.launch.py'])
+                PathJoinSubstitution([pkg_polebot_description, 'launch', 'polebot_agri_display.launch.py'])
             )
         ),
 
